@@ -1,5 +1,76 @@
 # NI LabVIEW CLI - Predefined Command Line Operations (🛠️ Under Construction)
 
+## Introduction
+
+You only need a GitHub repository to create and run a GitHub Actions workflow. In this guide, you'll add a workflow that demonstrates some of the essential features of GitHub Actions.
+
+The following example shows you how GitHub Actions jobs can be automatically triggered, where they run, and how they can interact with the code in your repository.
+
+## Creating your first workflow
+
+1. Create a `.github/workflows` directory in your repository on GitHub if this directory does not already exist. The directory must have this exact name in order for GitHub to discover any GitHub Actions workflows that it contains.
+
+2. In the `.github/workflows` directory, create a file with the `.yml` or `.yaml` extension. This tutorial will use `github-actions-demo.yml` as the file name. For more information, see (https://docs.github.com/en/repositories/working-with-files/managing-files/creating-new-files "Creating new files").
+
+3. Copy the following YAML contents into the `github-actions-demo.yml` file:
+
+   ```yaml copy
+   name: GitHub Actions Demo
+   run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+   on: [push]
+   jobs:
+      Explore-GitHub-Actions:
+         runs-on: ubuntu-latest
+         steps:
+            - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+            - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+            - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+            - name: Check out repository code
+            uses: actions/checkout@v4
+            - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+            - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+            - name: List files in the repository
+              run: |
+               ls ${{ github.workspace }}
+            - run: echo "🍏 This job's status is ${{ job.status }}."
+   ```
+
+4. Scroll to the bottom of the page and select **Create a new branch for this commit and start a pull request**. Then, to create a pull request, click **Propose new file**.
+
+  ![Screenshot of the "Commit new file" area of the page.](https://docs.github.com/assets/cb-67313/mw-1440/images/help/repository/actions-quickstart-commit-new-file.webp)
+
+Committing the workflow file to a branch in your repository triggers the `push` event and runs your workflow.
+
+## Viewing your workflow results
+
+1. On GitHub.com, navigate to the main page of the repository.
+
+2. Under your repository name, click 🍏 **Actions**.
+
+  ![Screenshot of the "Commit new file" area of the page.](https://docs.github.com/assets/cb-15465/mw-1440/images/help/repository/actions-tab-global-nav-update.webp)
+
+3. In the left sidebar, click the workflow you want to display, in this example "GitHub Actions Demo."
+
+  ![Screenshot of the "Commit new file" area of the page.](https://docs.github.com/assets/cb-64036/mw-1440/images/help/repository/actions-quickstart-workflow-sidebar.webp)
+
+4. From the list of workflow runs, click the name of the run you want to see, in this example "USERNAME is testing out GitHub Actions."
+
+5. In the left sidebar of the workflow run page, under **Jobs**, click the **Explore-GitHub-Actions** job.
+
+  ![Screenshot of the "Commit new file" area of the page.](https://docs.github.com/assets/cb-53821/mw-1440/images/help/repository/actions-quickstart-job.webp)
+
+6. The log shows you how each of the steps was processed. Expand any of the steps to view its details.
+
+  ![Screenshot of the "Commit new file" area of the page.](https://docs.github.com/assets/cb-95213/mw-1440/images/help/repository/actions-quickstart-logs.webp)
+
+For example, you can see the list of files in your repository:
+
+  ![Screenshot of the "Commit new file" area of the page.](https://docs.github.com/assets/cb-53979/mw-1440/images/help/repository/actions-quickstart-log-detail.webp)
+
+The example workflow you just added is triggered each time code is pushed to the branch, and shows you how GitHub Actions can work with the contents of your repository. For an in-depth tutorial, see "(https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions "Understanding GibHub Actions")."
+
+For more information about how to use GitHub Actions Quickstart, see this [help topic](https://docs.github.com/en/actions/quickstart "GitHub Actions Quickstart").
+
 ## GitHub Actions Runner
 
 ### Windows x64
@@ -109,3 +180,5 @@ For more information about how to running predefined NI LabVIEW CLI operations, 
 
 ## Reference
 For more information about how to use predefined NI LabVIEW CLI operations, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview/page/predefined-command-line-operations.html "Predefined Command Line Operations").
+
+
