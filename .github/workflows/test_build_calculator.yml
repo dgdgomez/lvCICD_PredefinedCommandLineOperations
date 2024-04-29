@@ -29,6 +29,6 @@ jobs:
                  
       # Run LabVIEW VI Analyzer via LabVIEWCLI
       - name: LabVIEW VI Analyzer
-        run: LabVIEWCLI -LogToConsole true -LogFilePath "$pwd\logging\log.txt" -Verbosity Detailed -OperationName RunVIAnalyzer -ConfigPath "$pwd\analyzer\viancfg\test.viancfg" -ReportPath "$pwd\analyzer\report\output.html" -ReportSaveType "HTML" −ResultsPath "$pwd\analyzer\result" -LabVIEWPath "C:\Program Files (x86)\National Instruments\LabVIEW 2023\LabVIEW.exe" -PortNumber 3363
+        run: LabVIEWCLI -LogToConsole true -LogFilePath "$pwd\logging\log.txt" -Verbosity Detailed -OperationName RunVIAnalyzer -ConfigPath "$pwd\analyzer\viancfg\test.viancfg" -ReportPath "$pwd\analyzer\report\AnalyzerReport.html" -ReportSaveType "HTML" −ResultsPath "$pwd\analyzer\result\AnalyzerResult.rsl" -LabVIEWPath "C:\Program Files (x86)\National Instruments\LabVIEW 2023\LabVIEW.exe" -PortNumber 3363
         
 
