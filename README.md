@@ -6,29 +6,64 @@ You only need a GitHub repository to create and run a GitHub Actions workflow. I
 
 The following example shows you how GitHub Actions jobs can be automatically triggered, where they run, and how they can interact with the code in your repository.
 
-## Example
+## Setting github action
 
-### Objective
+1. Go to GitHub repository.
 
-Develop a VI that simulates a keypad using the given application front panel (figure 1).
+2. Settings>Actions>Runners>New self-hosted runner
 
-### General Operation
+3. Select Windowsx64
 
-The VI must continuously run until the **E** key is pressed. While the VI is running, the **String** indicator must display the number. When the **C** key pressed, the **String** indicator must clear any numbers and display 0. When the **E** key is pressed, the number in the **String** indicator must be converted to a numeric value and displayed in the **Numeric** indicator. 
+3.1. Download runners
 
-For example: if keys 5678 are consecutively pressed, the **String** indicator must display 5, then 56, then 567 and finally 5678.
+3.1.1. Create a folder under the drive root
 
-### Application Therminology
+We recommend configuring the runner in a root folder of the Windows drive (e.g. "C:\actions-runner"). This will help avoid issues related to service identity folder permissions and long file path restrictions on Windows.
 
-| **Keypad** | Cluster of Booleans |
-| **String** | String indicator    |
-| **Numeric**| Numeric indicator   |
+3.1.2. Download the lastet runner package
 
-### Initialization
+https://github.com/actions/runner/releases/latest
 
-The application must initialize as shown in figure 1, and the front panel controls and indicators must be in the following states.
-- **String**: Set to 0
-- **Numeric**: Set to 0
+3.1.3. Extract the installer into the folder created in the previous step
+
+3.2. Configure
+
+
+The following snipped needs to be run on `powershell`:
+``` powershell
+# XX
+PowerShell Command: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+It is necessary to execute the following command from PowerShell Admin, to communicate with a remote server
+```
+
+3.2.1 Create the runner and start the configuration experience
+   
+The following snipped needs to be run on `cmd`:
+``` cmd
+   config.cmd --url https://gitbub.com/...
+   
+   it is necessary to ignore: $ ./
+
+# Runner Registration
+Enter the name of the runner group to add this runner to: [press Enter for Default]: Enter
+
+# Runner will have the following labels: 'self-hosted', 'Windows', 'X64'
+Enter any additional labels (ex. label-1, label-2): [press Enter to skip]: Enter
+
+# Runner settings
+Enter name of work folder:[press Enter for _work]: Enter
+
+# Runner as service
+Would you like to run the runner as service? (Y/N) [press Enter for N]: Enter
+
+# Run
+run.cmd
+it is necessary to ignore: $ ./
+
+```
+
+For more information about how to use GitHub Actions Runner, see this [help topic](https://github.com/actions/runner "GitHub Actions Runner").
 
 ## Creating your first workflow
 
@@ -39,38 +74,24 @@ The application must initialize as shown in figure 1, and the front panel contro
 3. Copy the following YAML contents into the `github-actions-demo.yml` file:
 
    ```yaml copy
-  # This is a basic workflow to help you get started with Actions
-
-  name: CI - Test&Build
-
-  # Controls when the workflow will run
-  on:
-    # Triggers the workflow on push or pull request events but only for the "main" branch
-    push:
-      branches: [ "main" ]
-    pull_request:
-      branches: [ "main" ]
-
-    # Allows you to run this workflow manually from the Actions tab
-    workflow_dispatch:
-
-  # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-  jobs:
-    # This workflow contains a single job called "build"
-    build:
-      permissions: write-all
-      # The type of runner that the job will run on
-      runs-on: self-hosted
-      
-      # Steps represent a sequence of tasks that will be executed as part of the job
-      steps:
-            
-        # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-        - uses: actions/checkout@v3
-                  
-        # Build LabVIEW Executable via LabVIEWCLI
-        - name: LabVIEW build
-          run: LabVIEWCLI -LogToConsole true -OperationName ExecuteBuildSpec -ProjectPath "$pwd\source\helloworld.lvproj" -BuildSpecName "helloworld" -LabVIEWPath "C:\Program Files (x86)\National Instruments\LabVIEW 2023\LabVIEW.exe" -PortNumber 3363
+   name: GitHub Actions Demo
+   run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+   on: [push]
+   jobs:
+      Explore-GitHub-Actions:
+         runs-on: ubuntu-latest
+         steps:
+            - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+            - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+            - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+            - name: Check out repository code
+            uses: actions/checkout@v4
+            - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+            - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+            - name: List files in the repository
+              run: |
+               ls ${{ github.workspace }}
+            - run: echo "🍏 This job's status is ${{ job.status }}."
    ```
 
 4. Scroll to the bottom of the page and select **Create a new branch for this commit and start a pull request**. Then, to create a pull request, click **Propose new file**.
@@ -202,6 +223,5 @@ For more information about how to running predefined NI LabVIEW CLI operations, 
 
 ## Reference
 For more information about how to use predefined NI LabVIEW CLI operations, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview/page/predefined-command-line-operations.html "Predefined Command Line Operations").
-
 
 
