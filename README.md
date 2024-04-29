@@ -70,7 +70,7 @@ The application must initialize as shown in figure 1, and the front panel contro
                   
         # Build LabVIEW Executable via LabVIEWCLI
         - name: LabVIEW build
-          run: LabVIEWCLI -LogToConsole true -OperationName ExecuteBuildSpec -ProjectPath "$pwd\source\Lhelloworld.lvproj" -BuildSpecName "helloworld" -LabVIEWPath "C:\Program Files (x86)\National Instruments\LabVIEW 2023\LabVIEW.exe" -PortNumber 3363
+          run: LabVIEWCLI -LogToConsole true -OperationName ExecuteBuildSpec -ProjectPath "$pwd\source\helloworld.lvproj" -BuildSpecName "helloworld" -LabVIEWPath "C:\Program Files (x86)\National Instruments\LabVIEW 2023\LabVIEW.exe" -PortNumber 3363
    ```
 
 4. Scroll to the bottom of the page and select **Create a new branch for this commit and start a pull request**. Then, to create a pull request, click **Propose new file**.
@@ -202,6 +202,5 @@ For more information about how to running predefined NI LabVIEW CLI operations, 
 
 ## Reference
 For more information about how to use predefined NI LabVIEW CLI operations, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview/page/predefined-command-line-operations.html "Predefined Command Line Operations").
-
 
 

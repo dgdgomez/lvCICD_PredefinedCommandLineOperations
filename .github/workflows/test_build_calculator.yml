@@ -29,5 +29,5 @@ jobs:
                  
       # Build LabVIEW Executable via LabVIEWCLI
       - name: LabVIEW build
-        run: LabVIEWCLI -LogToConsole true -OperationName ExecuteBuildSpec -ProjectPath "$pwd\source\Lhelloworld.lvproj" -BuildSpecName "helloworld" -LabVIEWPath "C:\Program Files (x86)\National Instruments\LabVIEW 2023\LabVIEW.exe" -PortNumber 3363
+        run: LabVIEWCLI -LogToConsole true -OperationName ExecuteBuildSpec -ProjectPath "$pwd\source\helloworld.lvproj" -BuildSpecName "helloworld" -LabVIEWPath "C:\Program Files (x86)\National Instruments\LabVIEW 2023\LabVIEW.exe" -PortNumber 3363
 
