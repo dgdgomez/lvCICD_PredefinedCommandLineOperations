@@ -17,6 +17,28 @@
 		<Item Name="Controls" Type="Folder">
 			<Item Name="Keypad_Typedef.ctl" Type="VI" URL="../Keypad_Typedef.ctl"/>
 		</Item>
+		<Item Name="SubVI" Type="Folder">
+			<Item Name="Add.lvtest" Type="TestItem" URL="../Add.lvtest">
+				<Property Name="utf.test.bind" Type="Str">Add.vi</Property>
+				<Property Name="utf.vector.test.bind" Type="Str">89AA4850-C0E0-875C-0AF3-93F02E41E92B</Property>
+			</Item>
+			<Item Name="Add.vi" Type="VI" URL="../Add.vi"/>
+			<Item Name="Subtract.lvtest" Type="TestItem" URL="../Subtract.lvtest">
+				<Property Name="utf.test.bind" Type="Str">Subtract.vi</Property>
+				<Property Name="utf.vector.test.bind" Type="Str">70909355-15CE-05A0-DBF3-95BE51A4291E</Property>
+			</Item>
+			<Item Name="Subtract.vi" Type="VI" URL="../Subtract.vi"/>
+			<Item Name="Multiply.lvtest" Type="TestItem" URL="../Multiply.lvtest">
+				<Property Name="utf.test.bind" Type="Str">Multiply.vi</Property>
+				<Property Name="utf.vector.test.bind" Type="Str">894D9057-464A-3AF2-600B-7C69AC897B78</Property>
+			</Item>
+			<Item Name="Multiply.vi" Type="VI" URL="../Multiply.vi"/>
+			<Item Name="Divide.lvtest" Type="TestItem" URL="../Divide.lvtest">
+				<Property Name="utf.test.bind" Type="Str">Divide.vi</Property>
+				<Property Name="utf.vector.test.bind" Type="Str">DFC99FB5-C741-9882-6264-D861F394CA0E</Property>
+			</Item>
+			<Item Name="Divide.vi" Type="VI" URL="../Divide.vi"/>
+		</Item>
 		<Item Name="main.vi" Type="VI" URL="../main.vi"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">

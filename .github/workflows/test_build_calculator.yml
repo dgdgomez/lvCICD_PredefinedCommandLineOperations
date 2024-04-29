@@ -27,8 +27,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
                  
-      # Run LabVIEW VI Analyzer via LabVIEWCLI
-      - name: LabVIEW VI Analyzer
-        run: LabVIEWCLI -LogToConsole true -LogFilePath "$pwd\logging\log.txt" -Verbosity Detailed -OperationName RunVIAnalyzer -ConfigPath "$pwd\analyzer\viancfg\test.viancfg" -ReportPath "$pwd\analyzer\report\AnalyzerReport.html" -ReportSaveType "HTML" -LabVIEWPath "C:\Program Files (x86)\National Instruments\LabVIEW 2023\LabVIEW.exe" -PortNumber 3363
-        
-
+      # Build LabVIEW Executable via LabVIEWCLI
+      - name: LabVIEW build
+        run: LabVIEWCLI -LogToConsole true -OperationName RunUnitTests -ProjectPath "$pwd\source\helloworld.lvproj" -JUnitReportPath "$pwd\test\report\test.xml" -LabVIEWPath "C:\Program Files (x86)\National Instruments\LabVIEW 2023\LabVIEW.exe" -PortNumber 3363
+ 
