@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <Config>
 <FileFormatVersion>1</FileFormatVersion>
-<AnalyzeProject>TRUE</AnalyzeProject>
-<ProjectPath>"..\\..\\source\\helloworld.lvproj"</ProjectPath>
+<AnalyzeProject>FALSE</AnalyzeProject>
+<ProjectPath>""</ProjectPath>
 <TargetIndex>0</TargetIndex>
 <ItemsToAnalyze>
 </ItemsToAnalyze>
