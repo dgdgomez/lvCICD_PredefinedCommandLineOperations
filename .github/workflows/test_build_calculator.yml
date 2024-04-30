@@ -30,4 +30,5 @@ jobs:
       # Build LabVIEW Executable via LabVIEWCLI
       - name: LabVIEW build
         run: LabVIEWCLI -LogToConsole true -LogFilePath "$pwd\logging\log.txt" -Verbosity Detailed -OperationName RunUnitTests -ProjectPath "$pwd\source\helloworld.lvproj" -JUnitReportPath "$pwd\test\report\test.xml" -LabVIEWPath "C:\Program Files (x86)\National Instruments\LabVIEW 2023\LabVIEW.exe" -PortNumber 3363
- 
+        
+
