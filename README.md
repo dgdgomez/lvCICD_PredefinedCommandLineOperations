@@ -6,139 +6,64 @@ You only need a GitHub repository to create and run a GitHub Actions workflow. I
 
 The following example shows you how GitHub Actions jobs can be automatically triggered, where they run, and how they can interact with the code in your repository.
 
-## Using the Unit Test Framework for Software Testing and Validation
+## Setting github action
 
-For more information about how to Using the Unit Test Framework for Software Testing and Validation, see this [help topic](https://www.ni.com/en/support/documentation/supplemental/09/using-the-unit-test-framework-for-software-testing-and-validatio.html "Using the Unit Test Framework for Software Testing and Validation").
+1. Go to GitHub repository.
 
-### Supported Execution Targets
+2. Settings>Actions>Runners>New self-hosted runner
 
-For more information about how to Supported Execution Targets, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfconcepts/utfc_support.html "Supported Execution Targets").
+3. Select Windowsx64
 
-## Unit Test Framework VIs
+3.1. Download runners
 
-For more information about how to Unit Test Framework VIs, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutf/utf_vis.html "Unit Test Framework VIs").
+3.1.1. Create a folder under the drive root
 
-### Create Report VI
+We recommend configuring the runner in a root folder of the Windows drive (e.g. "C:\actions-runner"). This will help avoid issues related to service identity folder permissions and long file path restrictions on Windows.
 
-For more information about how to Create Report VI, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutf/utf_report.html "Create Report VI").
+3.1.2. Download the lastet runner package
 
-### Open Results Window VI
+https://github.com/actions/runner/releases/latest
 
-For more information about how to Open Results Window VI, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutf/utf_results_window.html "Open Results Window VI").
+3.1.3. Extract the installer into the folder created in the previous step
 
-### Run Tests form File VI
+3.2. Configure
 
-For more information about how to Run Tests from File VI, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutf/utf_run_tests_file.html "Run Tests from File VI").
 
-### Run Tests from Project VI
+The following snipped needs to be run on `powershell`:
+``` powershell
+# XX
+PowerShell Command: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-For more information about how to Run Tests from Project VI, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutf/utf_run_tests_proj.html "Run Tests from Project VI").
+It is necessary to execute the following command from PowerShell Admin, to communicate with a remote server
+```
 
+3.2.1 Create the runner and start the configuration experience
+   
+The following snipped needs to be run on `cmd`:
+``` cmd
+   config.cmd --url https://gitbub.com/...
+   
+   it is necessary to ignore: $ ./
 
-## Test Cases Page
+# Runner Registration
+Enter the name of the runner group to add this runner to: [press Enter for Default]: Enter
 
-For more information about how to Test Cases Page, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutf/utf_test_cases_db.html "Test Cases Page").
+# Runner will have the following labels: 'self-hosted', 'Windows', 'X64'
+Enter any additional labels (ex. label-1, label-2): [press Enter to skip]: Enter
 
+# Runner settings
+Enter name of work folder:[press Enter for _work]: Enter
 
-## Executing Tests Interactively
+# Runner as service
+Would you like to run the runner as service? (Y/N) [press Enter for N]: Enter
 
-For more information about how to Executing Tests Interactively, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfhowto/utfh_execute_test.html "Executing Tests Interactively").
+# Run
+run.cmd
+it is necessary to ignore: $ ./
 
-### Executing Tests Programmatically
+```
 
-For more information about how to Executing Tests Programmatically, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfhowto/utfh_execute_vi.html "Executing Tests Programmatically").
-
-### Configuring Tests
-
-For more information about how to Configuring Tests, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfhowto/utfh_configure.html "Configuring Tests").
-
-### Configuring the Input/Output Setting of the VI under Test
-
-For more information about how to Configuring the Input/Output Setting of the VI under Test, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfhowto/utfh_configure_input_output.html "Configuring the Input/Output Setting of the VI under Test").
-
-### Specifying the Number of Times to Repeat a Test
-
-For more information about how to Specifying the Number of Times to Repeat a Test, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfhowto/utfh_specify_repetitions.html "Specifying the Number of Times to Repeat a Test").
-
-### Test Cases
-
-For more information about how to Test Cases, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfconcepts/utfc_tests_cases.html "Test Cases").
-
-### Configuring a Test to Skip
-
-For more information about how to Configuring a Test to Skip, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfhowto/utfh_configure_test_skip.html "Configuring a Test to Skip").
-
-### Code Coverage
-
-For more information about how to Code Coverage, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfconcepts/utfc_code_cov.html "Code Coverage").
-
-### Setup and Teardown VIs
-
-For more information about how to Step and Teardown VIs, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfconcepts/utfc_set_tear.html "Step and Teardown VIs").
-
-### Configuring Tests to Run Setup and Teardown VIs
-
-For more information about how to Configuring Tests to Run Setup and Teardown VIs, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfhowto/utfh_config_set_tear.html "Configuring Tests to Run Setup and Teardown VIs").
-
-### Setup/Teardown Page
-
-For more information about how to Setup/Teardown Page, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutf/utf_set_tear_db.html "Setup/Teardown Page").
-
-
-### Exchanging Values Between the VI under Test, Setup VI, Teardown VI, and the Test Cases Page
-
-For more information about how to Exchanging Values Between the VI under Test, Setup VI, Teardown VI, and the Test Cases Page, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfhowto/utfh_exchange_values.html "Exchanging Values Between the VI under Test, Setup VI, Teardown VI, and the Test Cases Page").
-
-### Entering Input Values, Expected Values, and Comparison Types
-
-For more information about how to Entering Input Values, Expected Values, and Comparison Types, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfhowto/utfh_enter_value.html "Entering Input Values, Expected Values, and Comparison Types").
-
-
-### Using Test Vector Indexes
-
-For more information about how to Using Test Vector Indexes, see this [help topic](https://knowledge.ni.com/KnowledgeArticleDetails?id=kA03q0000019j5hCAA&l=es-ES "Using Test Vector Indexes").
-
-### Creating a User-Defined Test VI
-
-For more information about how to Creating a User-Defined Test VI, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfhowto/utfh_create_ud_test.html "Creating a User-Defined Test VI").
-
-### Configuring a Test to Use a User-Defined Test VI
-
-For more information about how to Configuring a Test to Use a User-Defined Test VI, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfhowto/utfh_configure_ud_test_vi.html "Configuring a Test to Use a User-Defined Test VI").
-
-
-### Adding or Duplicating Test Cases
-
-For more information about how to Adding or Duplicating Test Cases, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfhowto/utfh_add_duplicate_test_case.html "Adding or Duplicating Test Cases").
-
-
-### Configuring Advanced Settings of Tests
-
-For more information about how to Configuring Advanced Settings of Tests, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfhowto/utfh_config_adv.html "Configuring Advanced Settings of Tests").
-
-### Specifying a Timeout for a Test
-
-For more information about how to Specifying a Timeout for a Test, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfhowto/utfh_specify_timeout.html "Specifying a Timeout for a Test").
-
-### Specifying a Test Priority
-
-For more information about how to Specifying a Test Priority, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfhowto/utfh_specify_priority.html "Specifying a Test Priority").
-
-### Deleting Test Cases
-
-For more information about how to Deleting Test Cases, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfhowto/utfh_delete_test_case.html "Deleting Test Cases").
-
-### Error Codes
-
-For more information about how to Error Codes, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutf/utf_error_codes.html "Error Codes").
-
-### Test Results
-
-For more information about how to Test Results, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutfconcepts/utfc_results.html "Test Results").
-
-### Unit Test Framework Results Window
-
-For more information about how to Unit Test Framework Results Window, see this [help topic](https://www.ni.com/docs/en-US/bundle/labview-unit-test-framework-toolkit-api-ref/page/lvutf/utf_results_db.html "Unit Test Framework Results Window").
+For more information about how to use GitHub Actions Runner, see this [help topic](https://github.com/actions/runner "GitHub Actions Runner").
 
 ## Creating your first workflow
 
