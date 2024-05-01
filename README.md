@@ -35,13 +35,15 @@ It is necessary to execute the following command from PowerShell Admin, to commu
 2. Start the configuration
    
 The following snipped needs to be run on `cmd`:
-``` cmd
+
+```cmd
    config.cmd --url https://gitbub.com/...
-   
-   it is necessary to ignore: $ ./
+```
 
-Console
+> [!IMPORTANT]
+> it is necessary to ignore: $ ./
 
+```cmd
 # Runner Registration
 Enter the name of the runner group to add this runner to: [press Enter for Default]: Enter
 
@@ -53,12 +55,11 @@ Enter name of work folder:[press Enter for _work]: Enter
 
 # Runner as service
 Would you like to run the runner as service? (Y/N) [press Enter for N]: Enter
-
 ```
 
 ### Run
 
-# Run
+The following snipped needs to be run on `cmd`:
 
 ```cmd copy
 run.cmd
