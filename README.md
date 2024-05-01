@@ -8,13 +8,28 @@ The following example shows you how GitHub Actions jobs can be automatically tri
 
 ## GitHub Actions Runner
 
-### Download
+### Adding a self-hosted runner to a repository
 
-1. Go to GitHub repository.
-2. Settings > Actions > Runners > New self-hosted runner
-3. Runner image > Select Windows x64
-4. Download the latest runner package
+1. On GitHub.com, navigate to the main page of the repository.
+2. Under your repository name, click **Settings**. If you cannot see the "Settings" tab, select the ... dropdown manu, then click **Settings**.
+
+image
+
+3. In the left sidebar, clic **Actions**, then click **Runners**.
+4. Click **New self-hosted runner**.
+5. Select the operating system image and architecture of your self-hosted runner machine.
+
+image
+
+> [!IMPORTANT]
+> Select Windows x64.
+
+6. You will see instructions showing you how to download the runner application and install it on your self-hosted runner machine.
+
+Download the latest runner package
 https://github.com/actions/runner/releases/latest
+
+For more information about how to Adding self-hosted runners, see this [help topic](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/adding-self-hosted-runners "Adding self-hosted runners").
 
 ### Create the runner
 
@@ -27,12 +42,11 @@ https://github.com/actions/runner/releases/latest
 
 The following snipped needs to be run on `powershell`:
 ``` powershell
-# XX
 PowerShell Command: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 It is necessary to execute the following command from PowerShell Admin, to communicate with a remote server
 
-2. Start the configuration
+2. Configure Runner
    
 The following snipped needs to be run on `cmd`:
 
@@ -57,7 +71,7 @@ Enter name of work folder:[press Enter for _work]: Enter
 Would you like to run the runner as service? (Y/N) [press Enter for N]: Enter
 ```
 
-### Run
+### Run Runner
 
 The following snipped needs to be run on `cmd`:
 
