@@ -54,17 +54,20 @@ Enter name of work folder:[press Enter for _work]: Enter
 # Runner as service
 Would you like to run the runner as service? (Y/N) [press Enter for N]: Enter
 
+```
+
 ### Run
 
 # Run
-run.cmd
-it is necessary to ignore: $ ./
 
+```cmd copy
+run.cmd
 ```
 
+> [!IMPORTANT]
+> it is necessary to ignore: $ ./
+
 Go to Settings > Actions > Runners and see de cofigured Runner 
-
-
 
 For more information about how to use GitHub Actions Runner, see this [help topic](https://github.com/actions/runner "GitHub Actions Runner").
 
