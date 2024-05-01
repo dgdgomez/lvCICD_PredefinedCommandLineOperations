@@ -8,25 +8,25 @@ The following example shows you how GitHub Actions jobs can be automatically tri
 
 ## Setting github action
 
-1. Go to GitHub repository.
+_1. Go to GitHub repository.
 
-2. Settings>Actions>Runners>New self-hosted runner
+_2. Settings>Actions>Runners>New self-hosted runner
 
-3. Select Windowsx64
+_3. Select Windowsx64
 
-3.1. Download runners
+_3.1. Download runners
 
-3.1.1. Create a folder under the drive root
+___3.1.1. Create a folder under the drive root
 
 We recommend configuring the runner in a root folder of the Windows drive (e.g. "C:\actions-runner"). This will help avoid issues related to service identity folder permissions and long file path restrictions on Windows.
 
-3.1.2. Download the lastet runner package
+___3.1.2. Download the lastet runner package
 
 https://github.com/actions/runner/releases/latest
 
-3.1.3. Extract the installer into the folder created in the previous step
+___3.1.3. Extract the installer into the folder created in the previous step
 
-3.2. Configure
+__3.2. Configure
 
 
 The following snipped needs to be run on `powershell`:
