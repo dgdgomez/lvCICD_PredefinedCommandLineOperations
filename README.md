@@ -14,6 +14,20 @@ The following example shows you how GitHub Actions jobs can be automatically tri
 
 ## 3. Select Windowsx64
 
+## GitHub Actions Runner
+
+### Windows x64
+
+The following snipped needs to be run on `powershell`:
+``` powershell
+# Create a folder under the drive root
+We recommend configuring the runner in a root folder of the Windows drive (e.g. "C:\actions-runner"). This will help avoid issues related to service identity folder permissions and long file path restrictions on Windows.
+# Download the latest runner package
+https://github.com/actions/runner/releases/latest
+# Extract the installer into the folder created in the previous step
+```
+For more information about how to use GitHub Actions Runner, see this [help topic](https://github.com/actions/runner "GitHub Actions Runner").
+
 ### 3.1. Download runners
 
 #### 3.1.1. Create a folder under the drive root
@@ -33,9 +47,8 @@ The following snipped needs to be run on `powershell`:
 ``` powershell
 # XX
 PowerShell Command: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-
-It is necessary to execute the following command from PowerShell Admin, to communicate with a remote server
 ```
+It is necessary to execute the following command from PowerShell Admin, to communicate with a remote server
 
 3.2.1 Create the runner and start the configuration experience
    
@@ -66,26 +79,4 @@ it is necessary to ignore: $ ./
 Go to Settings>Actions>Runners and see de cofigured Runner 
 
 For more information about how to use GitHub Actions Runner, see this [help topic](https://github.com/actions/runner "GitHub Actions Runner").
-
-## GitHub Actions Runner
-
-### Windows x64
-
-The following snipped needs to be run on `powershell`:
-``` powershell
-# Create a folder under the drive root
-We recommend configuring the runner in a root folder of the Windows drive (e.g. "C:\actions-runner"). This will help avoid issues related to service identity folder permissions and long file path restrictions on Windows.
-# Download the latest runner package
-https://github.com/actions/runner/releases/latest
-# Extract the installer into the folder created in the previous step
-```
-For more information about how to use GitHub Actions Runner, see this [help topic](https://github.com/actions/runner "GitHub Actions Runner").
-
-## GitHub Actions
-
-## Introduction
-
-You only need a {% data variables.product.prodname_dotcom %} repository to create and run a {% data variables.product.prodname_actions %} workflow. In this guide, you'll add a workflow that demonstrates some of the essential features of {% data variables.product.prodname_actions %}.
-
-The following example shows you how {% data variables.product.prodname_actions %} jobs can be automatically triggered, where they run, and how they can interact with the code in your repository.
 
