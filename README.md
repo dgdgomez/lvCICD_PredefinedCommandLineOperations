@@ -1,4 +1,4 @@
-# NI LabVIEW CLI - Predefined Command Line Operations (🛠️ Under Construction)
+# NI LabVIEW CLI - Predefined Command Line Operations (U+1f6e0 🛠️ Under Construction)
 
 ## Introduction
 
