@@ -14,25 +14,25 @@ The following example shows you how GitHub Actions jobs can be automatically tri
 2. Under your repository name, click **Settings**. If you cannot see the "Settings" tab, select the ... dropdown manu, then click **Settings**.
 
 <p align="center">
-<src="./images/repository-settings.png">
+<src="/images/repository-settings.png">
 </p>
 
 3. In the left sidebar, clic **Actions**, then click **Runners**.
 
 <p align="center">
-<src="./images/actions-runners.png">
+<src="/images/actions-runners.png">
 </p>
 
 4. Click **New self-hosted runner**.
 
 <p align="center">
-<src="./images/new-selfhosted-runner.png">
+<src="/images/new-selfhosted-runner.png">
 </p>
 
 5. Select the operating system image and architecture of your self-hosted runner machine.
 
 <p align="center">
-<src="./images/runner-image.png">
+<src="/images/runner-image.png">
 </p>
 
 > [!IMPORTANT]
