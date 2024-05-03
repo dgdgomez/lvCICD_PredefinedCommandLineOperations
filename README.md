@@ -13,13 +13,16 @@ The following example shows you how GitHub Actions jobs can be automatically tri
 1. On GitHub.com, navigate to the main page of the repository.
 2. Under your repository name, click **Settings**. If you cannot see the "Settings" tab, select the ... dropdown manu, then click **Settings**.
 
-image
+![alt text for screen readers](/img/repository-settings.png "Text to show on mouseover")
 
 3. In the left sidebar, clic **Actions**, then click **Runners**.
 4. Click **New self-hosted runner**.
+
+![alt text for screen readers](/img/settings-actions.png "Text to show on mouseover")
+
 5. Select the operating system image and architecture of your self-hosted runner machine.
 
-image
+![alt text for screen readers](/img/creating-selfhosted-runner.png "Text to show on mouseover")
 
 > [!IMPORTANT]
 > Select Windows x64.
