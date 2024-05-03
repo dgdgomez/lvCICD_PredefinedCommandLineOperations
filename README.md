@@ -38,18 +38,21 @@ The following example shows you how GitHub Actions jobs can be automatically tri
 > [!IMPORTANT]
 > Select Windows x64.
 
-6. Download
+6. Download the latest runner package by paste the following url directly into the browser
 
-You will see instructions showing you how to download the runner application and install it on your self-hosted runner machine.
+<p align="center">
+   <img src="./images/runner-image.png">
+</p>
 
 Download the latest runner package
 https://github.com/actions/runner/releases/latest
 
-For more information about how to Adding self-hosted runners, see this [help topic](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/adding-self-hosted-runners "Adding self-hosted runners").
+7. Create a folder of the Windows under the drive root (e.g. "C:\actions-runner")
 
-7. Create a folder under the drive root
+> [!TIP]
+> This will help avoid issues related to service identity folder permissions and long file path restrictions on Windows.
 
-8. Extract the installer in a root folder of the Windows drive (e.g. "C:\actions-runner"). This will help avoid issues related to service identity folder permissions and long file path restrictions on Windows.
+8. Extract the installer in the folder created in the previous step. 
 
 9. P
 
@@ -106,6 +109,8 @@ YYYY-MM-DD HH:MM:SSZ: Listening for Jobs
 13. 
 
 Go to Settings > Actions > Runners and see de cofigured Runner 
+
+For more information about how to Adding self-hosted runners, see this [help topic](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/adding-self-hosted-runners "Adding self-hosted runners").
 
 For more information about how to use GitHub Actions Runner, see this [help topic](https://github.com/actions/runner "GitHub Actions Runner").
 
