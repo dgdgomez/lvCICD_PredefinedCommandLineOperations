@@ -19,7 +19,7 @@ The following example shows you how GitHub Actions jobs can be automatically tri
 
 3. In the left sidebar, clic **Actions**, then click **Runners**.
 
-<p align="center">
+<p align="left">
    <img src="./images/actions-runners.png">
 </p>
 
