@@ -106,9 +106,21 @@ run.cmd
 YYYY-MM-DD HH:MM:SSZ: Listening for Jobs
 ```
 
-13. 
+13. Checking the status of a self-hosted runner
+
+13.1. In your repository, navigate to the main page and click **Settings**.
+13.2. In the left sidebar, click **Actions**, then click **Runners**.
+13.3. Under "Runners", you can view a list of registered runners, including the runner's name, labels, and status.
+
+The status can be one of the following:
+
+* **Idle**: The runner is connected to GitHub and is ready to execute jobs.
+* **Active**: The runner is currently executing a job.
+* **Offline**: The runner is not connected to GitHub. This could be because the machine is offline, the self-hosted runner application is not running on the machine, or the self-hosted runner application cannot communicate with GitHub.
 
 Go to Settings > Actions > Runners and see de cofigured Runner 
+
+For more information about how to Monitoring and troubleshooting self-hosted runners, see this [help topic](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/monitoring-and-troubleshooting-self-hosted-runners "Monitoring and troubleshooting self-hosted runners").
 
 For more information about how to Adding self-hosted runners, see this [help topic](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/adding-self-hosted-runners "Adding self-hosted runners").
 
