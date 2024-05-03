@@ -1,4 +1,4 @@
-# NI LabVIEW CLI - Predefined Command Line Operations (&#x1f6e0 🛠️ Under Construction)
+# NI LabVIEW CLI - Predefined Command Line Operations (🛠️ Under Construction)
 
 ## Introduction
 
@@ -38,21 +38,20 @@ The following example shows you how GitHub Actions jobs can be automatically tri
 > [!IMPORTANT]
 > Select Windows x64.
 
-6. You will see instructions showing you how to download the runner application and install it on your self-hosted runner machine.
+6. Download
+
+You will see instructions showing you how to download the runner application and install it on your self-hosted runner machine.
 
 Download the latest runner package
 https://github.com/actions/runner/releases/latest
 
 For more information about how to Adding self-hosted runners, see this [help topic](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/adding-self-hosted-runners "Adding self-hosted runners").
 
-### Create the runner
+7. Create a folder under the drive root
 
-1. Create a folder under the drive root
-2. Extract the installer in a root folder of the Windows drive (e.g. "C:\actions-runner"). This will help avoid issues related to service identity folder permissions and long file path restrictions on Windows.
+8. Extract the installer in a root folder of the Windows drive (e.g. "C:\actions-runner"). This will help avoid issues related to service identity folder permissions and long file path restrictions on Windows.
 
-### Setting
-
-1. P
+9. P
 
 The following snipped needs to be run on `powershell`:
 ``` powershell
@@ -60,7 +59,7 @@ PowerShell Command: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Cur
 ```
 It is necessary to execute the following command from PowerShell Admin, to communicate with a remote server
 
-2. Configure Runner
+10. Configure Runner
    
 The following snipped needs to be run on `cmd`:
 
@@ -85,7 +84,7 @@ Enter name of work folder:[press Enter for _work]: Enter
 Would you like to run the runner as service? (Y/N) [press Enter for N]: Enter
 ```
 
-### Run Runner
+11. Run Runner
 
 The following snipped needs to be run on `cmd`:
 
@@ -96,13 +95,15 @@ run.cmd
 > [!IMPORTANT]
 > it is necessary to ignore: $ ./
 
-### Checking that your self-hosted runner was successfylly added
+12. Checking that your self-hosted runner was successfylly added
 
 ```
 √ Connected to GitHub
 
 YYYY-MM-DD HH:MM:SSZ: Listening for Jobs
 ```
+
+13. 
 
 Go to Settings > Actions > Runners and see de cofigured Runner 
 
