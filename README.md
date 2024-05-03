@@ -13,11 +13,11 @@ The following example shows you how GitHub Actions jobs can be automatically tri
 1. On GitHub.com, navigate to the main page of the repository.
 2. Under your repository name, click **Settings**. If you cannot see the "Settings" tab, select the ... dropdown manu, then click **Settings**.
 
-![image repository settings](/images/repository-settings.png "repository settings"){:style="display:block; margin-left:auto; margin-right:auto"}
+<img align="right" src="/images/repository-settings.png">
 
 3. In the left sidebar, clic **Actions**, then click **Runners**.
 
-![image actions runners](/images/actions-runners.png "actions runners"){:style="display:block; margin-left:auto; margin-right:auto"}
+<img align="right" src="/images/actions-runners.png">
 
 4. Click **New self-hosted runner**.
 
