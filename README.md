@@ -15,20 +15,20 @@
     <!--2.--><li>Under your repository name, click <strong>Settings</strong>. If you cannot see the "Settings" tab, select the ... dropdown manu, then click <strong>Settings</strong>.</li>
       <br><p align="center">
         <img src="./images/repository-settings.png">
-      </p></br>
-    <li>In the left sidebar, clic <strong>Actions</strong>, then click <strong>Runners</strong>.</li>
+      </p>
+    <!--3.--><li>In the left sidebar, clic <strong>Actions</strong>, then click <strong>Runners</strong>.</li>
       <p align="left">
         <img src="./images/actions-runners.png">
       </p>
-    <li>Click <strong>New self-hosted runner</strong>.</li>
+    <!--4.--><li>Click <strong>New self-hosted runner</strong>.</li>
       <p align="center">
         <img src="./images/new-selfhosted-runner.png">
       </p>
-    <li>Select the operating system image and architecture of your self-hosted runner machine.</li>
+    <!--5.--><li>Select the operating system image and architecture of your self-hosted runner machine.</li>
       <p align="center">
         <img src="./images/runner-image.png">
       </p>
-    <li>Download the latest runner package by paste the following url directly into the browser.</li>
+    <!--6.--><li>Download the latest runner package by paste the following url directly into the browser.</li>
       <p align="center">
         <img src="./images/runner-image.png">
       </p>
@@ -36,9 +36,9 @@
         Download the latest runner package
         https://github.com/actions/runner/releases/latest
       </p>
-    <li>Create a folder of the Windows under the drive root (e.g. "C:\actions-runner")</li>
-    <li>Extract the installer in the folder created in the previous step. </li>
-    <li>P. </li>
+    <!--7.--><li>Create a folder of the Windows under the drive root (e.g. "C:\actions-runner")</li>
+    <!--8.--><li>Extract the installer in the folder created in the previous step. </li>
+    <!--9.--><li>P. </li>
       <p>
       The following snipped needs to be run on `powershell`:
       <pre><code>
@@ -46,7 +46,7 @@
       </code></pre>
       It is necessary to execute the following command from PowerShell Admin, to communicate with a remote server
       </p>
-    <li>Configure Runner.</li>
+    <!--10.--><li>Configure Runner.</li>
       <p>
       The following snipped needs to be run on `cmd`:
       <pre><code>
@@ -65,25 +65,25 @@
       Would you like to run the runner as service? (Y/N) [press Enter for N]: Enter
       </code></pre>
       </p>
-    <li>Run Runner.</li>
+    <!--11.--><li>Run Runner.</li>
       <p>
       The following snipped needs to be run on `cmd`:
       <pre><code>
       run.cmd
       </code></pre>
       </p>
-    <li>Checking that your self-hosted runner was successfylly added.</li>
+    <!--12.--><li>Checking that your self-hosted runner was successfylly added.</li>
       <p>
       <pre><code>
       √ Connected to GitHub</br>
       YYYY-MM-DD HH:MM:SSZ: Listening for Jobs
       </code></pre>
       </p>
-    <li>Checking the status of a self-hosted runner.</li>
+    <!--13.--><li>Checking the status of a self-hosted runner.</li>
       <ol>
-        <li><p>In your repository, navigate to the main page and click <strong>Settings</strong>.</p></li>
-        <li><p>In the left sidebar, click <strong>Actions</strong>, then click <strong>Runners</strong>.</p></li>
-        <li><p>Under "Runners", you can view a list of registered runners, including the runner's name, labels, and status.</p></li>
+        <!--13.1.--><li><p>In your repository, navigate to the main page and click <strong>Settings</strong>.</p></li>
+        <!--13.2.--><li><p>In the left sidebar, click <strong>Actions</strong>, then click <strong>Runners</strong>.</p></li>
+        <!--13.3.--><li><p>Under "Runners", you can view a list of registered runners, including the runner's name, labels, and status.</p></li>
           <p>
           The status can be one of the following:</br>
           * <strong>Idle</strong>: The runner is connected to GitHub and is ready to execute jobs.</br>
