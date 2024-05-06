@@ -28,6 +28,11 @@
       <p align="center">
         <img src="./images/runner-image.png">
       </p>
+      <p>
+      <blockquote>
+        <p>[!IMPORTANT]<br>Select Windows x64.</p>
+      </blockquote>
+      </p>
     <!--6.--><li>Download the latest runner package by paste the following url directly into the browser.</li></br>
       <p align="center">
         <img src="./images/runner-image.png">
@@ -39,35 +44,31 @@
     <!--7.--><li>Create a folder of the Windows under the drive root (e.g. "C:\actions-runner")</li>
     <!--8.--><li>Extract the installer in the folder created in the previous step. </li>
     <!--9.--><li>P. </li>
+      <p>The following snipped needs to be run on <code>powershell</code>:</p>
+      <pre><code class="lang-powershell">PowerShell Command: <span class="hljs-keyword">Set</span>-ExecutionPolicy -ExecutionPolicy RemoteSigned -<span class="hljs-keyword">Scope</span> CurrentUser</code></pre>
       <p>
-      The following snipped needs to be run on `powershell`:
-      <pre><code>
-      PowerShell Command: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-      </code></pre>
       It is necessary to execute the following command from PowerShell Admin, to communicate with a remote server
       </p>
     <!--10.--><li>Configure Runner.</li>
-      <p>
-      The following snipped needs to be run on `cmd`:
-      <pre><code>
-      config.cmd --url https://gitbub.com/...
-      </code></pre>
-      </p>
-      <p>
-      <pre><code>
-      # Runner Registration
-      Enter the name of the runner group to add this runner to: [press Enter for Default]: Enter
-      # Runner will have the following labels: 'self-hosted', 'Windows', 'X64'
-      Enter any additional labels (ex. label-1, label-2): [press Enter to skip]: Enter
-      # Runner settings
-      Enter name of work folder:[press Enter for _work]: Enter
-      # Runner as service
-      Would you like to run the runner as service? (Y/N) [press Enter for N]: Enter
-      </code></pre>
-      </p>
+      <p></p>
+      <p>The following snipped needs to be run on <code>cmd</code>:</p>
+      <pre><code class="lang-cmd">   config<span class="hljs-selector-class">.cmd</span> --url https:<span class="hljs-comment">//gitbub.com/...</span></code></pre>
+      <p></p>
+      <blockquote>
+      <p>[!IMPORTANT]<br>it is necessary to ignore: $ ./</p>
+      </blockquote>
+      <p></p>
+      <pre><code class="lang-cmd"><span class="hljs-comment"># Runner Registration</span>
+      <br>Enter <span class="hljs-keyword">the</span> name <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> runner group <span class="hljs-built_in">to</span> <span class="hljs-built_in">add</span> this runner <span class="hljs-built_in">to</span>: [press Enter <span class="hljs-keyword">for</span> Default]: Enter<br>
+      <span class="hljs-comment"># Runner will have the following labels: 'self-hosted', 'Windows', 'X64'</span><br>
+      Enter <span class="hljs-keyword">any</span> additional labels (ex. label<span class="hljs-number">-1</span>, label<span class="hljs-number">-2</span>): [press Enter <span class="hljs-built_in">to</span> skip]: Enter<br>
+      <span class="hljs-comment"># Runner settings</span><br>
+      Enter name <span class="hljs-keyword">of</span> work <span class="hljs-built_in">folder</span>:[press Enter <span class="hljs-keyword">for</span> <span class="hljs-title">_work</span>]: Enter<br>
+      <span class="hljs-comment"># Runner as service</span><br>
+      Would you like <span class="hljs-built_in">to</span> run <span class="hljs-keyword">the</span> runner <span class="hljs-keyword">as</span> service? (Y/N) [press Enter <span class="hljs-keyword">for</span> N]: Enter</code></pre>
+      <p></p>
     <!--11.--><li>Run Runner.</li>
-      <p>
-      The following snipped needs to be run on `cmd`:
+      <p>The following snipped needs to be run on <code>cmd</code>:</p>
       <pre><code>
       run.cmd
       </code></pre>
@@ -93,6 +94,7 @@
       </ol>
     </li>                        
   </ol>
+
 
 
 Go to Settings > Actions > Runners and see de cofigured Runner 
