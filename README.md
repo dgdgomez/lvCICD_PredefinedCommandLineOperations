@@ -73,21 +73,21 @@
       ```
       </p>
     <li>Checking that your self-hosted runner was successfylly added.</li>
-      <p>
-      ```
-      √ Connected to GitHub
+      <pre><code>
+      √ Connected to GitHub</br>
       YYYY-MM-DD HH:MM:SSZ: Listening for Jobs
-      ```
-      </p>
+      </code></pre>
     <li>Checking the status of a self-hosted runner.</li>
       <ol>
         <li><p>In your repository, navigate to the main page and click <strong>Settings</strong>.</p></li>
         <li><p>In the left sidebar, click <strong>Actions</strong>, then click <strong>Runners</strong>.</p></li>
         <li><p>Under "Runners", you can view a list of registered runners, including the runner's name, labels, and status.</p></li>
-          <p>The status can be one of the following:
-          * <strong>Idle</strong>: The runner is connected to GitHub and is ready to execute jobs.
-          * <strong>Active</strong>: The runner is currently executing a job.
-          * <strong>Offline</strong>: The runner is not connected to GitHub. This could be because the machine is offline, the self-hosted runner application is not running on the machine, or the self-hosted runner application cannot communicate with GitHub.</p>
+          <p>
+          The status can be one of the following:</br>
+          * <strong>Idle</strong>: The runner is connected to GitHub and is ready to execute jobs.</br>
+          * <strong>Active</strong>: The runner is currently executing a job.</br>
+          * <strong>Offline</strong>: The runner is not connected to GitHub. This could be because the machine is offline, the self-hosted runner application is not running on the machine, or the self-hosted runner application cannot communicate with GitHub.</br>
+          </p>
       </ol>
     </li>                        
   </ol>
