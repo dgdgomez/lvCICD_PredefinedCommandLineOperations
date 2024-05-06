@@ -11,24 +11,24 @@
 <h3>Adding a self-hosted runner to a repository</h3>
 
   <ol>
-    <!--1.--><li>On GitHub.com, navigate to the main page of the repository.</li>
-    <!--2.--><li>Under your repository name, click <strong>Settings</strong>. If you cannot see the "Settings" tab, select the ... dropdown manu, then click <strong>Settings</strong>.</li>
-      </br><p align="center">
+    <!--1.--><li><span class="fa-solid fa-circle-9"></span>On GitHub.com, navigate to the main page of the repository.</li>
+    <!--2.--><li>Under your repository name, click <strong>Settings</strong>. If you cannot see the "Settings" tab, select the ... dropdown manu, then click <strong>Settings</strong>.</li></br>
+      <p align="center">
         <img src="./images/repository-settings.png">
       </p>
-    <!--3.--><li>In the left sidebar, clic <strong>Actions</strong>, then click <strong>Runners</strong>.</li>
+    <!--3.--><li>In the left sidebar, clic <strong>Actions</strong>, then click <strong>Runners</strong>.</li></br>
       <p align="left">
         <img src="./images/actions-runners.png">
       </p>
-    <!--4.--><li>Click <strong>New self-hosted runner</strong>.</li>
+    <!--4.--><li>Click <strong>New self-hosted runner</strong>.</li></br>
       <p align="center">
         <img src="./images/new-selfhosted-runner.png">
       </p>
-    <!--5.--><li>Select the operating system image and architecture of your self-hosted runner machine.</li>
+    <!--5.--><li>Select the operating system image and architecture of your self-hosted runner machine.</li></br>
       <p align="center">
         <img src="./images/runner-image.png">
       </p>
-    <!--6.--><li>Download the latest runner package by paste the following url directly into the browser.</li>
+    <!--6.--><li>Download the latest runner package by paste the following url directly into the browser.</li></br>
       <p align="center">
         <img src="./images/runner-image.png">
       </p>
