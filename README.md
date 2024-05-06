@@ -1,29 +1,29 @@
-# NI LabVIEW CLI - Predefined Command Line Operations (🛠️ Under Construction)
+<h1>NI LabVIEW CLI - Predefined Command Line Operations (🛠️ Under Construction)</h1>
 
-## Introduction
+<h2>Introduction</h2>
 
-You only need a GitHub repository to create and run a GitHub Actions workflow. In this guide, you'll add a workflow that demonstrates some of the essential features of GitHub Actions.
+<p>You only need a GitHub repository to create and run a GitHub Actions workflow. In this guide, you'll add a workflow that demonstrates some of the essential features of GitHub Actions.</p>
 
-The following example shows you how GitHub Actions jobs can be automatically triggered, where they run, and how they can interact with the code in your repository.
+<p>The following example shows you how GitHub Actions jobs can be automatically triggered, where they run, and how they can interact with the code in your repository.</p>
 
-## GitHub Actions Runner
+<h2>GitHub Actions Runner</h2>
 
-### Adding a self-hosted runner to a repository
+<h3>Adding a self-hosted runner to a repository</h3>
 
 1. On GitHub.com, navigate to the main page of the repository.
-2. Under your repository name, click **Settings**. If you cannot see the "Settings" tab, select the ... dropdown manu, then click **Settings**.
+2. Under your repository name, click <strong>Settings</strong>. If you cannot see the "Settings" tab, select the ... dropdown manu, then click <strong>Settings</strong>.
 
 <p align="center">
    <img src="./images/repository-settings.png">
 </p>
 
-3. In the left sidebar, clic **Actions**, then click **Runners**.
+3. In the left sidebar, clic <strong>Actions</strong>, then click <strong>Runners</strong>*.
 
 <p align="left">
    <img src="./images/actions-runners.png">
 </p>
 
-4. Click **New self-hosted runner**.
+4. Click <strong>New self-hosted runner</strong>.
 
 <p align="center">
    <img src="./images/new-selfhosted-runner.png">
@@ -108,15 +108,15 @@ YYYY-MM-DD HH:MM:SSZ: Listening for Jobs
 
 13. Checking the status of a self-hosted runner
 
-13.1. In your repository, navigate to the main page and click **Settings**.
-13.2. In the left sidebar, click **Actions**, then click **Runners**.
+13.1. In your repository, navigate to the main page and click <strong>Settings</strong>.
+13.2. In the left sidebar, click <strong>Actions</strong>, then click <strong>Runners</strong>.
 13.3. Under "Runners", you can view a list of registered runners, including the runner's name, labels, and status.
 
-The status can be one of the following:
+<p>The status can be one of the following:
 
-* **Idle**: The runner is connected to GitHub and is ready to execute jobs.
-* **Active**: The runner is currently executing a job.
-* **Offline**: The runner is not connected to GitHub. This could be because the machine is offline, the self-hosted runner application is not running on the machine, or the self-hosted runner application cannot communicate with GitHub.
+* <strong>Idle</strong>: The runner is connected to GitHub and is ready to execute jobs.
+* <strong>Active</strong>: The runner is currently executing a job.
+* <strong>Offline</strong>: The runner is not connected to GitHub. This could be because the machine is offline, the self-hosted runner application is not running on the machine, or the self-hosted runner application cannot communicate with GitHub.</p>
 
 Go to Settings > Actions > Runners and see de cofigured Runner 
 
