@@ -10,42 +10,60 @@
 
 <h3>Adding a self-hosted runner to a repository</h3>
 
-1. On GitHub.com, navigate to the main page of the repository.
-2. Under your repository name, click <strong>Settings</strong>. If you cannot see the "Settings" tab, select the ... dropdown manu, then click <strong>Settings</strong>.
+  <ol>
+    <li><span>1.</span>On GitHub.com, navigate to the main page of the repository.</li>
+    <li><span>2.</span>Under your repository name, click <strong>Settings</strong>. If you cannot see the "Settings" tab, select the ... dropdown manu, then click <strong>Settings</strong>.</li>
+      <p align="center">
+        <img src="./images/repository-settings.png">
+      </p>
+    <li><span>3.</span>In the left sidebar, clic <strong>Actions</strong>, then click <strong>Runners</strong>.</li>
+      <p align="left">
+        <img src="./images/actions-runners.png">
+      </p>
+    <li><span>4.</span>Click <strong>New self-hosted runner</strong>.</li>
+      <p align="center">
+        <img src="./images/new-selfhosted-runner.png">
+      </p>
+    <li><span>5.</span>Select the operating system image and architecture of your self-hosted runner machine.</li>
+      <p align="center">
+        <img src="./images/runner-image.png">
+      </p>
+    <li><span>6.</span>Download the latest runner package by paste the following url directly into the browser.</li>
+      <p align="center">
+        <img src="./images/runner-image.png">
+      </p>
+      <p>
+        Download the latest runner package
+        https://github.com/actions/runner/releases/latest
+      </p>
+      <ol>
+        <li><span>1.1</span> <p>ItemItemItem ItemItemItemItemItemItemItemItem ItemItemItemItemItemItemItemItem ItemItemItemItemItemItemItemItem</p></li>
+        <li><span>1.2</span> <p>ItemItemItem ItemItemItemItemItemItemItemItem ItemItemItemItemItemItemItemItem ItemItemItemItemItemItemItemItem</p></li>
+        <li><span>1.3</span> <p>ItemItemItem ItemItemItemItemItemItemItemItem ItemItemItemItemItemItemItemItem ItemItemItemItemItemItemItemItem</p></li>
+        <li><span>1.4</span> <p>Item</p></li>
+      </ol>
+    </li>            
+    <li><span>2.</span> Item
+      <ol>
+        <li><span>2.1</span> Item</li>
+      </ol>            
+    </li>
+    <li><span>1.</span> Item</li>
+      <ol>
+        <li><span>1.1</span> <p>ItemItemItem ItemItemItemItemItemItemItemItem ItemItemItemItemItemItemItemItem ItemItemItemItemItemItemItemItem</p></li>
+        <li><span>1.2</span> <p>ItemItemItem ItemItemItemItemItemItemItemItem ItemItemItemItemItemItemItemItem ItemItemItemItemItemItemItemItem</p></li>
+        <li><span>1.3</span> <p>ItemItemItem ItemItemItemItemItemItemItemItem ItemItemItemItemItemItemItemItem ItemItemItemItemItemItemItemItem</p></li>
+        <li><span>1.4</span> <p>Item</p></li>
+      </ol>
+    </li>            
+    <li><span>2.</span> Item
+      <ol>
+        <li><span>2.1</span> Item</li>
+      </ol>            
+    </li>
+  </ol>
 
-<p align="center">
-   <img src="./images/repository-settings.png">
-</p>
 
-3. In the left sidebar, clic <strong>Actions</strong>, then click <strong>Runners</strong>*.
-
-<p align="left">
-   <img src="./images/actions-runners.png">
-</p>
-
-4. Click <strong>New self-hosted runner</strong>.
-
-<p align="center">
-   <img src="./images/new-selfhosted-runner.png">
-</p>
-
-5. Select the operating system image and architecture of your self-hosted runner machine.
-
-<p align="center">
-   <img src="./images/runner-image.png">
-</p>
-
-> [!IMPORTANT]
-> Select Windows x64.
-
-6. Download the latest runner package by paste the following url directly into the browser
-
-<p align="center">
-   <img src="./images/runner-image.png">
-</p>
-
-Download the latest runner package
-https://github.com/actions/runner/releases/latest
 
 7. Create a folder of the Windows under the drive root (e.g. "C:\actions-runner")
 
