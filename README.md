@@ -11,7 +11,7 @@
 <h3>Adding a self-hosted runner to a repository</h3>
 
   <ol>
-    <!--1.--><li><span class="fa-solid fa-circle-9"></span>On GitHub.com, navigate to the main page of the repository.</li>
+    <!--1.--><li><i class="fa-solid fa-circle-9"></i>On GitHub.com, navigate to the main page of the repository.</li>
     <!--2.--><li>Under your repository name, click <strong>Settings</strong>. If you cannot see the "Settings" tab, select the ... dropdown manu, then click <strong>Settings</strong>.</li></br>
       <p align="center">
         <img src="./images/repository-settings.png">
