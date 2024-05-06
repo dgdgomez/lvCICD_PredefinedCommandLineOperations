@@ -41,20 +41,20 @@
     <li>P. </li>
       <p>
       The following snipped needs to be run on `powershell`:
-      ``` powershell
+      <pre><code>
       PowerShell Command: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-      ```
+      </code></pre>
       It is necessary to execute the following command from PowerShell Admin, to communicate with a remote server
       </p>
     <li>Configure Runner.</li>
       <p>
       The following snipped needs to be run on `cmd`:
-      ```cmd
+      <pre><code>
       config.cmd --url https://gitbub.com/...
-      ```
+      </code></pre>
       </p>
       <p>
-      ```cmd
+      <pre><code>
       # Runner Registration
       Enter the name of the runner group to add this runner to: [press Enter for Default]: Enter
       # Runner will have the following labels: 'self-hosted', 'Windows', 'X64'
@@ -63,20 +63,22 @@
       Enter name of work folder:[press Enter for _work]: Enter
       # Runner as service
       Would you like to run the runner as service? (Y/N) [press Enter for N]: Enter
-      ```
+      </code></pre>
       </p>
     <li>Run Runner.</li>
       <p>
       The following snipped needs to be run on `cmd`:
-      ```cmd copy
+      <pre><code>
       run.cmd
-      ```
+      </code></pre>
       </p>
     <li>Checking that your self-hosted runner was successfylly added.</li>
+      <p>
       <pre><code>
       √ Connected to GitHub</br>
       YYYY-MM-DD HH:MM:SSZ: Listening for Jobs
       </code></pre>
+      </p>
     <li>Checking the status of a self-hosted runner.</li>
       <ol>
         <li><p>In your repository, navigate to the main page and click <strong>Settings</strong>.</p></li>
