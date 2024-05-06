@@ -55,7 +55,7 @@
       <pre><code class="lang-cmd">   config<span class="hljs-selector-class">.cmd</span> --url https:<span class="hljs-comment">//gitbub.com/...</span></code></pre>
       <p></p>
       <blockquote>
-      <p>[!IMPORTANT]<br>it is necessary to ignore: $ ./</p>
+      <p><font size="-1">[!IMPORTANT]<br>it is necessary to ignore: $ ./</font></p>
       </blockquote>
       <p></p>
       <pre><code class="lang-cmd"><span class="hljs-comment"># Runner Registration</span>
