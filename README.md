@@ -8,8 +8,10 @@
 <h2>GitHub Actions Runner</h2>
 
 <h3>Adding a self-hosted runner to a repository</h3>
+
+<h4>On GitHub.com, </h4>
   <p />
-  <!--1.--><p>&#x2776 On GitHub.com, navigate to the main page of the repository.</p>
+  <!--1.--><p>&#x2776 On Navigate to the main page of the repository.</p>
   <!--2.--><p>&#x2777 Under your repository name, click <strong>Settings</strong>. If you cannot see the "Settings" tab, select the <strong>&#x22EF</strong> dropdown manu, then click <strong>Settings</strong>.</p>
     <p align="center">
       <img src="./images/repository-settings.png">
@@ -39,9 +41,12 @@
       Download the latest runner package
       https://github.com/actions/runner/releases/latest
     </p>
-  <!--7.--><p>&#x277C Create a folder of the Windows under the drive root (e.g. "C:\actions-runner")</p>
-  <!--8.--><p>&#x277D Extract the installer in the folder created in the previous step.</p>
-  <!--9.--><p>&#x277E P.</p>
+  
+<h4>On Windows,</h4>
+  <p />
+  <!--1.--><p>&#x2776 Create a folder of the Windows under the drive root (e.g. "C:\actions-runner")</p>
+  <!--2.--><p>&#x2777 Extract the installer in the folder created in the previous step.</p>
+  <!--3.--><p>&#x2778 P.</p>
     <p/>
     <p>The following snipped needs to be run on <code>powershell</code>:</p>
     <p/>
@@ -49,7 +54,7 @@
     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
     </code></pre>
     <p>It is necessary to execute the following command from PowerShell Admin, to communicate with a remote server</p>
-  <!--10.--><p>&#x277F Configure Runner.</p>
+  <!--4.--><p>&#x2779 Configure Runner.</p>
     <p/>
     <p>The following snipped needs to be run on <code>cmd</code>:</p>
     <pre><code class="language-cmd">
@@ -70,7 +75,7 @@
     Would you like to run the runner as service? (Y/N) [press Enter for N]: Enter
     </code></pre>
     <p/>
-  <!--11.--><p>&#x24EB Run Runner.</p>
+  <!--5.--><p>&#x277A Run Runner.</p>
     <p/>
     <p>The following snipped needs to be run on <code>cmd</code>:</p>
     <pre><code class="language-cmd">
@@ -81,26 +86,26 @@
     <p><font size="-1">[!IMPORTANT]<br>it is necessary to ignore: $ ./</font></p>
     </blockquote>
     <p/>
-  <!--12.--><p>&#x24EC Checking that your self-hosted runner was successfylly added.</p>
+  <!--6.--><p>&#x277B Checking that your self-hosted runner was successfylly added.</p>
     <p/>
     <pre><code class="language-cmd">
     √ Connected to GitHub<br>
     YYYY-MM-DD HH:MM:SSZ: Listening for Jobs
     </code></pre>
     <p/>
-  <!--13.--><p>&#x24ED Checking the status of a self-hosted runner.</p>
-    <ul style="list-style-type:none;">
-      <!--13.1.--><li><p>In your repository, navigate to the main page and click <strong>Settings</strong>.</p></li>
-      <!--13.2.--><li><p>In the left sidebar, click <strong>Actions</strong>, then click <strong>Runners</strong>.</p></li>
-      <!--13.3.--><li><p>Under "Runners", you can view a list of registered runners, including the runner's name, labels, and status.</p></li>
-        <p>
-        The status can be one of the following:</br>
-        * <strong>Idle</strong>: The runner is connected to GitHub and is ready to execute jobs.</br>
-        * <strong>Active</strong>: The runner is currently executing a job.</br>
-        * <strong>Offline</strong>: The runner is not connected to GitHub. This could be because the machine is offline, the self-hosted runner application is not running on the machine, or the self-hosted runner application cannot communicate with GitHub.</br>
-        </p>
-    </ul>
-  </li>                        
+
+<h4>On GitHub.com, checking the status of a self-hosted runner</h4>
+  <p />
+  <!--1.--><p>&#x2776 In your repository, navigate to the main page and click <strong>Settings</strong>.</p>
+  <!--2.--><p>&#x2777 In the left sidebar, click <strong>Actions</strong>, then click <strong>Runners</strong>.</p>
+  <!--3.--><p>&#x2778 Under "Runners", you can view a list of registered runners, including the runner's name, labels, and status.</p>
+  <p>
+  The status can be one of the following:<br/>
+  * <strong>Idle</strong>: The runner is connected to GitHub and is ready to execute jobs.<br/>
+  * <strong>Active</strong>: The runner is currently executing a job.<br/>
+  * <strong>Offline</strong>: The runner is not connected to GitHub. This could be because the machine is offline, the self-hosted runner application is not running on the machine, or the self-hosted runner application cannot communicate with GitHub.<br/>
+  </p>
+                       
 
 Go to Settings > Actions > Runners and see de cofigured Runner 
 
