@@ -70,7 +70,7 @@
     Would you like to run the runner as service? (Y/N) [press Enter for N]: Enter
     </code></pre>
     <p/>
-  <!--11.--><p>Run Runner.</p>
+  <!--11.--><p>&#x24EB Run Runner.</p>
     <p/>
     <p>The following snipped needs to be run on <code>cmd</code>:</p>
     <pre><code class="language-cmd">
@@ -81,14 +81,14 @@
     <p><font size="-1">[!IMPORTANT]<br>it is necessary to ignore: $ ./</font></p>
     </blockquote>
     <p/>
-  <!--12.--><p>Checking that your self-hosted runner was successfylly added.</p>
+  <!--12.--><p>&#x24EC Checking that your self-hosted runner was successfylly added.</p>
     <p/>
     <pre><code class="language-cmd">
     √ Connected to GitHub<br>
     YYYY-MM-DD HH:MM:SSZ: Listening for Jobs
     </code></pre>
     <p/>
-  <!--13.--><p>Checking the status of a self-hosted runner.</p>
+  <!--13.--><p>&#x24ED Checking the status of a self-hosted runner.</p>
     <ul style="list-style-type:none;">
       <!--13.1.--><li><p>In your repository, navigate to the main page and click <strong>Settings</strong>.</p></li>
       <!--13.2.--><li><p>In the left sidebar, click <strong>Actions</strong>, then click <strong>Runners</strong>.</p></li>
@@ -101,7 +101,6 @@
         </p>
     </ul>
   </li>                        
-
 
 Go to Settings > Actions > Runners and see de cofigured Runner 
 
