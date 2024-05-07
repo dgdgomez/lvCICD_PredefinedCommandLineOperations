@@ -11,20 +11,20 @@
 <h3>Adding a self-hosted runner to a repository</h3>
 
   <ol>
-    <!--1.--><li><i class="fa-solid fa-circle-9"></i>On GitHub.com, navigate to the main page of the repository.</li>
-    <!--2.--><li>Under your repository name, click <strong>Settings</strong>. If you cannot see the "Settings" tab, select the ... dropdown manu, then click <strong>Settings</strong>.</li></br>
+    <!--1.--><li><p>On GitHub.com, navigate to the main page of the repository.</p></li>
+    <!--2.--><li><p>Under your repository name, click <strong>Settings</strong>. If you cannot see the "Settings" tab, select the ... dropdown manu, then click <strong>Settings</strong>.</p></li>
       <p align="center">
         <img src="./images/repository-settings.png">
       </p>
-    <!--3.--><li>In the left sidebar, clic <strong>Actions</strong>, then click <strong>Runners</strong>.</li></br>
+    <!--3.--><li><p>In the left sidebar, clic <strong>Actions</strong>, then click <strong>Runners</strong>.</p></li>
       <p align="left">
         <img src="./images/actions-runners.png">
       </p>
-    <!--4.--><li>Click <strong>New self-hosted runner</strong>.</li></br>
+    <!--4.--><li><p>Click <strong>New self-hosted runner</strong>.</p></li>
       <p align="center">
         <img src="./images/new-selfhosted-runner.png">
       </p>
-    <!--5.--><li>Select the operating system image and architecture of your self-hosted runner machine.</li></br>
+    <!--5.--><li><p>Select the operating system image and architecture of your self-hosted runner machine.</p></li>
       <p align="center">
         <img src="./images/runner-image.png">
       </p>
@@ -33,7 +33,7 @@
         <p>[!IMPORTANT]<br>Select Windows x64.</p>
       </blockquote>
       </p>
-    <!--6.--><li>Download the latest runner package by paste the following url directly into the browser.</li></br>
+    <!--6.--><li><p>Download the latest runner package by paste the following url directly into the browser.</p></li>
       <p align="center">
         <img src="./images/runner-image.png">
       </p>
@@ -41,46 +41,54 @@
         Download the latest runner package
         https://github.com/actions/runner/releases/latest
       </p>
-    <!--7.--><li>Create a folder of the Windows under the drive root (e.g. "C:\actions-runner")</li>
-    <!--8.--><li>Extract the installer in the folder created in the previous step. </li>
-    <!--9.--><li>P. </li>
+    <!--7.--><li><p>Create a folder of the Windows under the drive root (e.g. "C:\actions-runner")</p></li>
+    <!--8.--><li><p>Extract the installer in the folder created in the previous step.</p></li>
+    <!--9.--><li><p>P.</p></li>
+      <p></p>
       <p>The following snipped needs to be run on <code>powershell</code>:</p>
-      <pre><code class="lang-powershell">PowerShell Command: <span class="hljs-keyword">Set</span>-ExecutionPolicy -ExecutionPolicy RemoteSigned -<span class="hljs-keyword">Scope</span> CurrentUser</code></pre>
+      <p></p>
+      <pre><code class="language-powershell">
+      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+      </code></pre>
       <p>
       It is necessary to execute the following command from PowerShell Admin, to communicate with a remote server
       </p>
-    <!--10.--><li>Configure Runner.</li>
+    <!--10.--><li><p>Configure Runner.</p></li>
       <p></p>
       <p>The following snipped needs to be run on <code>cmd</code>:</p>
-      <pre><code class="lang-cmd">   config<span class="hljs-selector-class">.cmd</span> --url https:<span class="hljs-comment">//gitbub.com/...</span></code></pre>
+      <pre><code class="language-cmd">
+      config.cmd --url https://gitbub.com/...
+      </code></pre>
       <p></p>
       <blockquote>
       <p><font size="-1">[!IMPORTANT]<br>it is necessary to ignore: $ ./</font></p>
       </blockquote>
+      <pre><code class="language-cmd">
+      <span class="hljs-comment"># Runner Registration</span>
+      Enter the name of the runner group to add this runner to: [press Enter for Default]: Enter
+      <span class="hljs-comment"># Runner will have the following labels: 'self-hosted', 'Windows', 'X64'</span>
+      Enter any additional labels (ex. label-1, label-2): [press Enter to skip]: Enter
+      <span class="hljs-comment"># Runner settings</span>
+      Enter name of work folder:[press Enter for _work]: Enter
+      <span class="hljs-comment"># Runner as service</span>
+      Would you like to run the runner as service? (Y/N) [press Enter for N]: Enter
+      </code></pre>
       <p></p>
-      <pre><code class="lang-cmd"><span class="hljs-comment"># Runner Registration</span>
-      <br>Enter <span class="hljs-keyword">the</span> name <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> runner group <span class="hljs-built_in">to</span> <span class="hljs-built_in">add</span> this runner <span class="hljs-built_in">to</span>: [press Enter <span class="hljs-keyword">for</span> Default]: Enter<br>
-      <span class="hljs-comment"># Runner will have the following labels: 'self-hosted', 'Windows', 'X64'</span><br>
-      Enter <span class="hljs-keyword">any</span> additional labels (ex. label<span class="hljs-number">-1</span>, label<span class="hljs-number">-2</span>): [press Enter <span class="hljs-built_in">to</span> skip]: Enter<br>
-      <span class="hljs-comment"># Runner settings</span><br>
-      Enter name <span class="hljs-keyword">of</span> work <span class="hljs-built_in">folder</span>:[press Enter <span class="hljs-keyword">for</span> <span class="hljs-title">_work</span>]: Enter<br>
-      <span class="hljs-comment"># Runner as service</span><br>
-      Would you like <span class="hljs-built_in">to</span> run <span class="hljs-keyword">the</span> runner <span class="hljs-keyword">as</span> service? (Y/N) [press Enter <span class="hljs-keyword">for</span> N]: Enter</code></pre>
+    <!--11.--><li><p>Run Runner.</p></li>
       <p></p>
-    <!--11.--><li>Run Runner.</li>
       <p>The following snipped needs to be run on <code>cmd</code>:</p>
-      <pre><code>
+      <pre><code class="language-cmd">
       run.cmd
       </code></pre>
-      </p>
-    <!--12.--><li>Checking that your self-hosted runner was successfylly added.</li>
-      <p>
-      <pre><code>
+      <p></p>
+    <!--12.--><li><p>Checking that your self-hosted runner was successfylly added.</p></li>
+      <p></p>
+      <pre><code class="language-cmd">
       √ Connected to GitHub</br>
       YYYY-MM-DD HH:MM:SSZ: Listening for Jobs
       </code></pre>
-      </p>
-    <!--13.--><li>Checking the status of a self-hosted runner.</li>
+      <p></p>
+    <!--13.--><li><p>Checking the status of a self-hosted runner.</p></li>
       <ol>
         <!--13.1.--><li><p>In your repository, navigate to the main page and click <strong>Settings</strong>.</p></li>
         <!--13.2.--><li><p>In the left sidebar, click <strong>Actions</strong>, then click <strong>Runners</strong>.</p></li>
@@ -99,9 +107,9 @@
 
 Go to Settings > Actions > Runners and see de cofigured Runner 
 
-For more information about how to Monitoring and troubleshooting self-hosted runners, see this [help topic](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/monitoring-and-troubleshooting-self-hosted-runners "Monitoring and troubleshooting self-hosted runners").
+<p>For more information about how to Monitoring and troubleshooting self-hosted runners, see this <a href="https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/monitoring-and-troubleshooting-self-hosted-runners" title="Monitoring and troubleshooting self-hosted runners">help topic</a>.</p>
 
-For more information about how to Adding self-hosted runners, see this [help topic](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/adding-self-hosted-runners "Adding self-hosted runners").
+<p>For more information about how to Adding self-hosted runners, see this <a href="https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/adding-self-hosted-runners" title="Adding self-hosted runners">help topic</a>.</p>
 
-For more information about how to use GitHub Actions Runner, see this [help topic](https://github.com/actions/runner "GitHub Actions Runner").
+<p>For more information about how to use GitHub Actions Runner, see this <a href="https://github.com/actions/runner" title="GitHub Actions Runner">help topic</a>.</p>
 
