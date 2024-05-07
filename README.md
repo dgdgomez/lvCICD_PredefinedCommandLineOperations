@@ -11,7 +11,7 @@
 <h3>Adding a self-hosted runner to a repository</h3>
 
   <ol>
-    <!--1.--><li><p>On GitHub.com, navigate to the main page of the repository.</p></li>
+    <!--1.--><li><p>&#x2776 On GitHub.com, navigate to the main page of the repository.</p></li>
     <!--2.--><li><p>Under your repository name, click <strong>Settings</strong>. If you cannot see the "Settings" tab, select the ... dropdown manu, then click <strong>Settings</strong>.</p></li>
       <p align="center">
         <img src="./images/repository-settings.png">
@@ -28,11 +28,11 @@
       <p align="center">
         <img src="./images/runner-image.png">
       </p>
-      <p>
+      <p></p>
       <blockquote>
-        <p>[!IMPORTANT]<br>Select Windows x64.</p>
+        <p><font size="-1">[!IMPORTANT]<br>Select Windows x64.</font></p>
       </blockquote>
-      </p>
+      <p></p>
     <!--6.--><li><p>Download the latest runner package by paste the following url directly into the browser.</p></li>
       <p align="center">
         <img src="./images/runner-image.png">
@@ -81,10 +81,14 @@
       run.cmd
       </code></pre>
       <p></p>
+      <blockquote>
+      <p><font size="-1">[!IMPORTANT]<br>it is necessary to ignore: $ ./</font></p>
+      </blockquote>
+      <p></p>
     <!--12.--><li><p>Checking that your self-hosted runner was successfylly added.</p></li>
       <p></p>
       <pre><code class="language-cmd">
-      √ Connected to GitHub</br>
+      √ Connected to GitHub<br>
       YYYY-MM-DD HH:MM:SSZ: Listening for Jobs
       </code></pre>
       <p></p>
