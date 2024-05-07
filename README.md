@@ -10,21 +10,21 @@
 
 <h3>Adding a self-hosted runner to a repository</h3>
 
-  <ol>
+  <ul style="list-style-type:none;">
     <!--1.--><li><p>&#x2776 On GitHub.com, navigate to the main page of the repository.</p></li>
-    <!--2.--><li><p>Under your repository name, click <strong>Settings</strong>. If you cannot see the "Settings" tab, select the ... dropdown manu, then click <strong>Settings</strong>.</p></li>
+    <!--2.--><li><p>&#x2777 Under your repository name, click <strong>Settings</strong>. If you cannot see the "Settings" tab, select the <strong>&#x22EF</strong> dropdown manu, then click <strong>Settings</strong>.</p></li>
       <p align="center">
         <img src="./images/repository-settings.png">
       </p>
-    <!--3.--><li><p>In the left sidebar, clic <strong>Actions</strong>, then click <strong>Runners</strong>.</p></li>
+    <!--3.--><li><p>&#x2778 In the left sidebar, clic <strong>Actions</strong>, then click <strong>Runners</strong>.</p></li>
       <p align="left">
         <img src="./images/actions-runners.png">
       </p>
-    <!--4.--><li><p>Click <strong>New self-hosted runner</strong>.</p></li>
+    <!--4.--><li><p>&#x2779 Click <strong>New self-hosted runner</strong>.</p></li>
       <p align="center">
         <img src="./images/new-selfhosted-runner.png">
       </p>
-    <!--5.--><li><p>Select the operating system image and architecture of your self-hosted runner machine.</p></li>
+    <!--5.--><li><p>&#x277A Select the operating system image and architecture of your self-hosted runner machine.</p></li>
       <p align="center">
         <img src="./images/runner-image.png">
       </p>
@@ -33,7 +33,7 @@
         <p><font size="-1">[!IMPORTANT]<br>Select Windows x64.</font></p>
       </blockquote>
       <p></p>
-    <!--6.--><li><p>Download the latest runner package by paste the following url directly into the browser.</p></li>
+    <!--6.--><li><p>&#x277B Download the latest runner package by paste the following url directly into the browser.</p></li>
       <p align="center">
         <img src="./images/runner-image.png">
       </p>
@@ -41,9 +41,9 @@
         Download the latest runner package
         https://github.com/actions/runner/releases/latest
       </p>
-    <!--7.--><li><p>Create a folder of the Windows under the drive root (e.g. "C:\actions-runner")</p></li>
-    <!--8.--><li><p>Extract the installer in the folder created in the previous step.</p></li>
-    <!--9.--><li><p>P.</p></li>
+    <!--7.--><li><p>&#x277C Create a folder of the Windows under the drive root (e.g. "C:\actions-runner")</p></li>
+    <!--8.--><li><p>&#x277D Extract the installer in the folder created in the previous step.</p></li>
+    <!--9.--><li><p>&#x277E P.</p></li>
       <p></p>
       <p>The following snipped needs to be run on <code>powershell</code>:</p>
       <p></p>
@@ -53,7 +53,7 @@
       <p>
       It is necessary to execute the following command from PowerShell Admin, to communicate with a remote server
       </p>
-    <!--10.--><li><p>Configure Runner.</p></li>
+    <!--10.--><li><p>&#x277F Configure Runner.</p></li>
       <p></p>
       <p>The following snipped needs to be run on <code>cmd</code>:</p>
       <pre><code class="language-cmd">
@@ -93,7 +93,7 @@
       </code></pre>
       <p></p>
     <!--13.--><li><p>Checking the status of a self-hosted runner.</p></li>
-      <ol>
+      <ul style="list-style-type:none;">
         <!--13.1.--><li><p>In your repository, navigate to the main page and click <strong>Settings</strong>.</p></li>
         <!--13.2.--><li><p>In the left sidebar, click <strong>Actions</strong>, then click <strong>Runners</strong>.</p></li>
         <!--13.3.--><li><p>Under "Runners", you can view a list of registered runners, including the runner's name, labels, and status.</p></li>
@@ -103,9 +103,9 @@
           * <strong>Active</strong>: The runner is currently executing a job.</br>
           * <strong>Offline</strong>: The runner is not connected to GitHub. This could be because the machine is offline, the self-hosted runner application is not running on the machine, or the self-hosted runner application cannot communicate with GitHub.</br>
           </p>
-      </ol>
+      </ul>
     </li>                        
-  </ol>
+  </ul>
 
 
 
