@@ -95,6 +95,7 @@
 <p>For more information about how to Monitoring and troubleshooting self-hosted runners, see this <a href="https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/monitoring-and-troubleshooting-self-hosted-runners" title="Monitoring and troubleshooting self-hosted runners">help topic</a>.</p>
 
 <h5>Related concepts:</h5>
-
-<p><a href="https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/configuring-the-self-hosted-runner-application-as-a-service">Configuring the self-hosted runner application as a service.</a>
-<a href="https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/removing-self-hosted-runners">Removing self-hosted runners.</a></p>
+<p>
+<a href="https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/configuring-the-self-hosted-runner-application-as-a-service">Configuring the self-hosted runner application as a service.</a><br/>
+<a href="https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/removing-self-hosted-runners">Removing self-hosted runners.</a><br/>
+</p>
