@@ -42,6 +42,8 @@
       https://github.com/actions/runner/releases/latest
     </p>
 
+<p>For more information about how to Adding self-hosted runners, see this <a href="https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/adding-self-hosted-runners" title="Adding self-hosted runners">help topic</a>.</p>
+
 <h4>Configure and Run the GitHub Actions Runner on Windows</h4>
   <p />
   <!--1.--><p>&#x2776 Create a folder of the Windows under the drive root (e.g. "C:\actions-runner")</p>
@@ -60,7 +62,7 @@
     <blockquote>
     <p><font size="-1">[!IMPORTANT]<br/>it is necessary to ignore: $ ./</font></p>
     </blockquote>
-    <pre><code class="language-cmd"><span class="hljs-comment"># Runner Registration<br/></span>Enter the name of the runner group to add this runner to: [press Enter for Default]: Enter<br/><span class="hljs-comment"># Runner will have the following labels: 'self-hosted', 'Windows', 'X64'</span><br/>Enter any additional labels (ex. label-1, label-2): [press Enter to skip]: Enter<br/><span class="hljs-comment"># Runner settings</span><br/>Enter name of work folder:[press Enter for _work]: Enter<br/><span class="hljs-comment"># Runner as service</span><br/>Would you like to run the runner as service? (Y/N) [press Enter for N]: Enter</code></pre>
+    <pre><code class="language-cmd"><span class="hljs-comment"># Runner Registration</span>Enter the name of the runner group to add this runner to: [press Enter for Default]: Enter<br/><span class="hljs-comment"># Runner will have the following labels: 'self-hosted', 'Windows', 'X64'</span><br/>Enter any additional labels (ex. label-1, label-2): [press Enter to skip]: Enter<br/><span class="hljs-comment"># Runner settings</span><br/>Enter name of work folder:[press Enter for _work]: Enter<br/><span class="hljs-comment"># Runner as service</span><br/>Would you like to run the runner as service? (Y/N) [press Enter for N]: Enter</code></pre>
     <p/>
   <!--5.--><p>&#x277A Run Runner.</p>
     <p/>
@@ -76,6 +78,8 @@
     <pre><code class="language-cmd">&#x221A Connected to GitHub<br/><br/>YYYY-MM-DD HH:MM:SSZ: Listening for Jobs</code></pre>
     <p/>
 
+<p>For more information about how to use GitHub Actions Runner, see this <a href="https://github.com/actions/runner" title="GitHub Actions Runner">help topic</a>.</p>
+
 <h4>On GitHub.com, checking the status of a self-hosted runner</h4>
   <p />
   <!--1.--><p>&#x2776 In your repository, navigate to the main page and click <strong>Settings</strong>.</p>
@@ -90,7 +94,7 @@
                        
 <p>For more information about how to Monitoring and troubleshooting self-hosted runners, see this <a href="https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/monitoring-and-troubleshooting-self-hosted-runners" title="Monitoring and troubleshooting self-hosted runners">help topic</a>.</p>
 
-<p>For more information about how to Adding self-hosted runners, see this <a href="https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/adding-self-hosted-runners" title="Adding self-hosted runners">help topic</a>.</p>
+<h5>Related concepts:</h5>
 
-<p>For more information about how to use GitHub Actions Runner, see this <a href="https://github.com/actions/runner" title="GitHub Actions Runner">help topic</a>.</p>
-
+<p><a href="https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/configuring-the-self-hosted-runner-application-as-a-service">Configuring the self-hosted runner application as a service</a>.</p>
+<p><a href="https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/removing-self-hosted-runners">Removing self-hosted runners</a>.</p>
