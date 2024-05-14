@@ -75,7 +75,7 @@
     <p/>
   <!--6.--><p>&#x277B Checking that your self-hosted runner was successfylly added.</p>
     <p/>
-    <pre><code class="language-cmd">&#x221A Connected to GitHub<br />YYYY-MM-DD HH:MM:SSZ: Listening for Jobs</code></pre>
+    <pre><code class="language-cmd"><p>&#x221A Connected to GitHub<p/><p>YYYY-MM-DD HH:MM:SSZ: Listening for Jobs<p/></code></pre>
     <p/>
 
 <p>For more information about how to use GitHub Actions Runner, see this <a href="https://github.com/actions/runner" title="GitHub Actions Runner">help topic</a>.</p>
